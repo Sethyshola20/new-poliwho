@@ -1,0 +1,234 @@
+$primary-color: #E5E7E9;
+$secondary-color: white;
+$card-height: 360px;
+$card-width: 170px;
+
+
+* {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+a {
+    color: unset;
+}
+
+a:visited {
+    color: unset;
+}
+
+h3,
+h4,
+h5 {
+    font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+
+
+body {
+    background-color: $primary-color;
+}
+
+h1 {
+    font-size: 20px;
+    padding: 2em 0 2em .5em;
+}
+
+.rep-container {
+    max-width: 100%;
+    min-height: 100vh;
+    flex-wrap: wrap;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-around;
+    padding: .5em;
+
+    h4 {
+        color: $secondary-color;
+    }
+
+    .LR {
+        background-color: rgb(30, 30, 200);
+    }
+
+    .LFI {
+        background-color: rgb(204, 42, 70);
+    }
+
+    .RN {
+        background-color: rgb(165, 165, 165);
+    }
+
+    .MODEM {
+        background-color: rgb(246, 137, 14);
+    }
+
+    .REN {
+        background-color: rgb(231, 196, 7);
+    }
+
+    .ECO {
+        background-color: green;
+    }
+
+    .SOC {
+        background-color: rgb(255, 50, 190);
+    }
+
+    .HOR {
+        background-color: rgb(99, 227, 254);
+    }
+
+    .GDR {
+        background-color: rgb(254, 29, 29);
+    }
+
+    h4 {
+        font-size: 13px;
+        padding: .25em 0;
+        border-radius: 2px;
+    }
+
+    h3 {
+        font-size: 16px;
+
+        span {
+            font-size: 12px;
+            opacity: 0.7;
+        }
+    }
+
+    .rep-card {
+        display: flex;
+        flex-direction: column;
+        border-radius: 5px;
+        align-items: center;
+        justify-content: space-between;
+        padding: .5em;
+        margin: 0 .25em 1.5em .25em;
+        background-color: $secondary-color;
+        height: $card-height;
+        width: $card-width;
+        transition: all .2s ease-in;
+
+        .birth {
+            font-size: 11px;
+            opacity: .7;
+        }
+
+        .profile-pic {
+            object-fit: cover;
+            padding-top: .5em;
+            width: 100%;
+            border-radius: 2px;
+        }
+
+        .rep-header,
+        .rep-footer {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+        }
+
+        .rep-header {
+            align-items: baseline;
+
+        }
+
+        h4 {
+            padding: .5em;
+        }
+
+        .rep-footer {
+            flex-direction: column;
+            justify-content: space-around;
+
+            .mandats {
+                font-size: 10px;
+            }
+
+            .localisation {
+                display: flex;
+                flex-direction: column;
+
+                .num-circo {
+                    font-size: 12px;
+                    opacity: .7;
+                }
+
+                .nom-circo {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 0 0 0.05em 0;
+                    font-size: 12px;
+                    color: black;
+
+                    h5 {
+                        font-size: 12px;
+                    }
+                }
+            }
+
+            .lien-site {
+                display: flex;
+                justify-content: center;
+                padding: 1em;
+                font-size: 14px;
+
+                a {
+                    transition: .2s ease-in;
+                }
+
+                a:hover {
+                    color: rgb(28, 155, 239);
+                }
+            }
+        }
+    }
+
+    .rep-card:hover {
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+        transform: translateY(-10px);
+        transform: scale(1.015);
+    }
+}
+
+.form {
+    padding: 2em 0 1.5em .5em;
+    background-color: #E5E7E9;
+    z-index: 4;
+    position: sticky;
+    top: 0;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+
+    input {
+        width: 20em;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .rep-container {
+        justify-content: space-evenly;
+
+        .rep-card {
+            height: 400px;
+            width: 220px;
+        }
+    }
+}
+
+@media screen and (min-width: 1150px) {
+    main.rep-container {
+        article.rep-card {
+            height: 450px;
+            width: 260px;
+        }
+    }
+}
