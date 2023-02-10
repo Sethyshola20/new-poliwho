@@ -1,6 +1,7 @@
-$primary-color: #E5E7E9;
-$secondary-color: white;
-$card-height: 360px;
+$primary-color: #000000;
+$secondary-color: rgb(40, 40, 41);
+$third-color: #f5f5f7;
+$card-height: 400px;
 $card-width: 170px;
 
 
@@ -27,6 +28,7 @@ h3,
 h4,
 h5 {
     font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: $third-color;
 }
 
 
@@ -46,11 +48,12 @@ h1 {
     flex-wrap: wrap;
     display: flex;
     align-items: baseline;
-    justify-content: space-around;
-    padding: .5em;
+    justify-content: center;
+    gap: 10px;
+    padding: .5em 0;
 
     h4 {
-        color: $secondary-color;
+        color: $third-color;
     }
 
     .LR {
@@ -110,7 +113,7 @@ h1 {
         border-radius: 5px;
         align-items: center;
         justify-content: space-between;
-        padding: .5em;
+        padding: .8em 1em .5em;
         margin: 0 .25em 1.5em .25em;
         background-color: $secondary-color;
         height: $card-height;
@@ -124,9 +127,11 @@ h1 {
 
         .profile-pic {
             object-fit: cover;
-            padding-top: .5em;
             width: 100%;
-            border-radius: 2px;
+
+            img {
+                border-radius: 4px;
+            }
         }
 
         .rep-header,
@@ -168,7 +173,6 @@ h1 {
                     justify-content: space-between;
                     padding: 0 0 0.05em 0;
                     font-size: 12px;
-                    color: black;
 
                     h5 {
                         font-size: 12px;
@@ -181,28 +185,26 @@ h1 {
                 justify-content: center;
                 padding: 1em;
                 font-size: 14px;
+                opacity: .7;
+                color: rgb(28, 155, 239);
 
                 a {
                     transition: .2s ease-in;
                 }
 
-                a:hover {
-                    color: rgb(28, 155, 239);
-                }
+
             }
         }
     }
 
     .rep-card:hover {
         box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-        transform: translateY(-10px);
-        transform: scale(1.015);
     }
 }
 
 .form {
     padding: 2em 0 1.5em .5em;
-    background-color: #E5E7E9;
+    background-color: $primary-color;
     z-index: 4;
     position: sticky;
     top: 0;
@@ -210,6 +212,11 @@ h1 {
 
     input {
         width: 20em;
+        background-color: $secondary-color;
+        border-style: unset;
+        border-radius: 8px;
+        padding: .4em 1em;
+        color: #f5f5f7;
     }
 }
 
