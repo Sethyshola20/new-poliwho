@@ -9,7 +9,7 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <Head />
-      <body>{children}</body>
+      <body> {children}</body>
     </html>
   );
 }
