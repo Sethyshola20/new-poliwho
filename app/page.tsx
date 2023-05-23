@@ -53,7 +53,6 @@ async function fetchRepresentative(): Promise<Depute[]> {
 
     return data.deputes;
   } catch (error: any) {
-    console.log(error);
     throw new Error(error);
   }
 }
